@@ -28,8 +28,8 @@ public class XmlParser implements Parser, ParserCallback {
     private String encoding = "UTF-8";
 
     @Override
-    public String call(ParserItem item) {
-        String result = "";
+    public Object call(ParserItem item) {
+        Object result = null;
         try {
             result = read(item.getSource(), item.getPath());
         } catch (ParserException e) {
